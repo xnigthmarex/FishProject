@@ -1,3 +1,5 @@
+import javax.swing.ImageIcon;
+
 
 public class Bubbles {
 	 private double x;
@@ -8,7 +10,20 @@ public class Bubbles {
 	  private boolean xmove;
 	  private boolean ymove;
 	 private double yfixforsinmovementfunction;
+	 private ImageIcon fishFront;
+	 private ImageIcon fishBack;
+	private  final String[] allBack = {"./fish-removebg-preview back.png","orange fish back.png","redfishback.png"};
+	private final String[] allFront = {"./fish-removebg-preview.png","orange fish.png","redfish.png"};
 	
+
+	public ImageIcon getFishFront() {
+		return fishFront;
+	}
+	
+	public ImageIcon getFishBack() {
+		return fishBack;
+	}
+
 	public double getYfixforsinmovementfunction() {
 		return yfixforsinmovementfunction;
 	}
@@ -28,6 +43,9 @@ public class Bubbles {
 		 this.xmove = xmove;
 		 this.ymove = ymove;
 		 this.yfixforsinmovementfunction = y;
+		 int test = (int)(Math.random()*3);
+		 this.fishBack = new ImageIcon(allBack[test]);
+		 this.fishFront = new ImageIcon(allFront[test]);
 	 }
 
 
