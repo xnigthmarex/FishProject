@@ -213,6 +213,7 @@ public class RainingBubblesOriginal extends Applet
 
         paint(offgc);
 
+        
         g.drawImage(offscreen, 0, 0, this);
     }
 }
